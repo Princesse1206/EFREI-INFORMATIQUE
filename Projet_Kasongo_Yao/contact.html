@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • EFREI Paris</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <div class="efrei-banner">
+    <div class="banner-inner">
+      <div class="banner-left">
+        <div class="banner-logo">
+          <img src="media/media/logoefrei.png" alt="EFREI Paris" />
+        </div>
+        <div>
+          <p class="banner-school">École d'ingénieurs</p>
+          <h2 class="banner-name">EFREI Paris</h2>
+          <p class="banner-sub">Département Informatique — XTI205-CYB</p>
+        </div>
+      </div>
+      <div class="banner-right">
+        <span class="banner-tag"> Informatique</span>
+        <span class="banner-tag gold">✦ XTI205-CYB</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <p class="brand-kicker">EFREI Paris</p>
+        <h1 class="brand-title">Contact</h1>
+      </div>
+    </div>
+
+    <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+    <nav class="nav" id="mainNav" aria-label="Navigation principale">
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link" href="formations.html">Formations</a>
+      <a class="nav-link" href="equipe.html">Équipe</a>
+      <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="section">
+      <h2 class="page-title">Nous contacter</h2>
+      <p class="muted">Formulaire avec validation JavaScript. Nous répondons sous 48h.</p>
+
+      <div class="img-grid contact-images">
+        <img src="media/media/marche.webp" alt="Campus EFREI" class="campus-img" />
+        <img src="media/media/onlyefrei.webp" alt="Amphithéâtre EFREI" class="campus-img" />
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" minlength="2" required placeholder="Votre nom" />
+          <p class="error" id="errName" hidden>Ton nom doit contenir au moins 2 caractères.</p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="votre@email.com" />
+          <p class="error" id="errEmail" hidden>Entre un email valide.</p>
+        </div>
+
+        <div class="field">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg" rows="5" minlength="10" required placeholder="Votre message..."></textarea>
+          <p class="error" id="errMsg" hidden>Ton message doit contenir au moins 10 caractères.</p>
+        </div>
+
+        <button class="btn primary" type="submit">Envoyer </button>
+        <p class="success" id="successMsg" hidden>Message envoyé  Merci, nous vous répondrons bientôt !</p>
+      </form>
+    </section>
+
+    <section class="section" id="apropos">
+      <h3 class="page-title">À propos</h3>
+      <div class="about-card">
+        <p>Ce site a été créé dans le cadre du projet <strong>XTI205-CYB</strong> : un site Web (HTML/CSS/JS) sans framework, responsive et interactif, présentant le département informatique de l'EFREI Paris.</p>
+        <ul>
+          <li><strong>Princesse</strong> — design, structure des pages, JavaScript (checklist, compteur, agenda)</li>
+          <li><strong>Charles-Emmanuel</strong> — design, FAQ accordion, validation formulaire, JavaScript</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="muted">© 2025–2026 • Projet XTI205-CYB • EFREI Paris — Département Informatique</p>
+  </footer>
+
+</body>
+</html>

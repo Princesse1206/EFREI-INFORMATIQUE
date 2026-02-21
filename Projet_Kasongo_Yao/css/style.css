@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --blue:       #1a3a6b;
+  --blue-hi:    #2a52a0;
+  --blue-light: #e8eef7;
+  --bg:         #f4f6fa;
+  --white:      #ffffff;
+  --border:     #d0d8e8;
+  --text:       #1a2540;
+  --muted:      #5a6a8a;
+  --gold:       #c8960a;
+  --danger:     #dc3545;
+  --radius:     10px;
+  --shadow:     0 2px 8px rgba(0,0,0,0.07);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+/* ── BANNIÈRE ───────────────────────────────── */
+.efrei-banner {
+  background: linear-gradient(135deg, #0f2347, #1a3a6b);
+  padding: 0 24px;
+  border-bottom: 3px solid var(--gold);
+}
+.banner-inner {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 14px 0; gap: 16px;
+}
+.banner-left { display: flex; align-items: center; gap: 14px; }
+.banner-logo {
+  width: 80px; height: 80px;
+  background: white;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  display: grid; place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 4px;
+}
+.banner-logo img { width: 100%; height: 100%; object-fit: contain; }
+.banner-school {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 2px;
+}
+.banner-name { font-size: 20px; font-weight: 700; color: #fff; margin: 0; }
+.banner-sub { font-size: 12px; color: rgba(255,255,255,0.65); margin: 2px 0 0; }
+.banner-right { display: flex; gap: 8px; }
+.banner-tag {
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.1);
+  font-size: 12px; color: rgba(255,255,255,0.8);
+  white-space: nowrap;
+}
+.banner-tag.gold {
+  border-color: rgba(200,150,10,0.5);
+  background: rgba(200,150,10,0.15);
+  color: var(--gold);
+}
+
+/* ── HEADER ─────────────────────────────────── */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  padding: 10px 24px;
+
+  /* ✅ Fix : ancre le menu mobile (absolute) au header */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  position: relative;
+}
+
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo {
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  border: 2px solid var(--blue-light);
+  border-radius: var(--radius);
+  background: var(--blue-light);
+  font-size: 18px;
+}
+.brand-kicker {
+  margin: 0; font-size: 10px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--blue-hi);
+}
+.brand-title { margin: 0; font-size: 14px; font-weight: 700; color: var(--text); }
+
+.nav { display: flex; gap: 2px; }
+.nav-link {
+  padding: 7px 12px; border-radius: var(--radius);
+  font-size: 14px; font-weight: 500; color: var(--muted);
+  transition: background .15s, color .15s;
+}
+.nav-link:hover { background: var(--blue-light); color: var(--blue); }
+.nav-link[aria-current="page"] {
+  background: var(--blue-light);
+  color: var(--blue); font-weight: 600;
+}
+
+.burger {
+  display: none;
+  background: var(--blue-light); border: none;
+  color: var(--blue); width: 36px; height: 36px;
+  border-radius: var(--radius); font-size: 18px; cursor: pointer;
+}
+
+/* ── HERO ───────────────────────────────────── */
+.hero { padding: 36px 24px 16px; }
+.hero-content {
+  max-width: 960px; margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  box-shadow: var(--shadow);
+}
+.hero-content h2 {
+  margin: 0 0 10px;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700; color: var(--text);
+}
+.highlight { color: var(--blue); }
+.hero-content p { margin: 0 0 18px; color: var(--muted); }
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.hero-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ── CYBER HIGHLIGHT ────────────────────────── */
+.cyber-highlight {
+  margin-top: 14px;
+  display: flex; gap: 20px; flex-wrap: wrap;
+  background: var(--white); border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius); padding: 24px;
+  box-shadow: var(--shadow);
+}
+.cyber-text { flex: 2; min-width: 220px; }
+.cyber-text p { color: var(--muted); margin: 0 0 16px; }
+.cyber-stats { flex: 1; min-width: 160px; display: flex; flex-direction: column; gap: 14px; justify-content: center; }
+.stat-block { text-align: center; background: var(--blue-light); border-radius: var(--radius); padding: 14px; }
+.stat-num { display: block; font-size: 28px; font-weight: 700; color: var(--blue); }
+.stat-label { font-size: 12px; color: var(--muted); }
+
+/* ── BOUTONS ────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 18px; border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--white); color: var(--text);
+  font-size: 14px; font-weight: 500; cursor: pointer;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+.btn:hover { background: var(--bg); transform: translateY(-1px); }
+.btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+.btn.primary:hover { background: var(--blue-hi); border-color: var(--blue-hi); }
+.btn.danger { background: #fff; color: var(--danger); border-color: #f5c6cb; }
+.btn.danger:hover { background: #fff0f0; }
+
+/* ── SECTIONS ───────────────────────────────── */
+.section { max-width: 960px; margin: 0 auto; padding: 24px; }
+.page-title { margin: 0 0 6px; font-size: 20px; font-weight: 700; color: var(--text); }
+.muted { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
+
+/* ── BADGES ─────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--blue-light);
+  border: 1px solid #b0c0d8;
+  font-size: 12px; font-weight: 500; color: var(--blue);
+}
+
+/* ── CARDS ──────────────────────────────────── */
+.cards { margin-top: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
+.card h4 { margin: 0 0 8px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--blue); }
+.card p { margin: 0 0 12px; color: var(--muted); font-size: 13.5px; }
+.link { color: var(--blue-hi); font-size: 13px; font-weight: 600; }
+.link:hover { text-decoration: underline; }
+
+/* ── TABLE ──────────────────────────────────── */
+.table-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: auto; box-shadow: var(--shadow); }
+.table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.table th {
+  padding: 11px 14px; border-bottom: 2px solid var(--border);
+  text-align: left; font-size: 12px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--muted); background: var(--blue-light);
+}
+.table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: #f0f4fa; }
+
+/* ── ACCORDION ──────────────────────────────── */
+.accordion { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+.acc-btn {
+  text-align: left; width: 100%; padding: 12px 16px;
+  border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--white); color: var(--text);
+  font-size: 14px; font-weight: 500; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background .15s;
+}
+.acc-btn::after { content: '+'; color: var(--blue); font-size: 18px; font-weight: 400; transition: transform .2s; }
+.acc-btn[aria-expanded="true"] { background: var(--blue-light); border-color: #b0c0d8; }
+.acc-btn[aria-expanded="true"]::after { transform: rotate(45deg); }
+.acc-btn:hover { background: var(--blue-light); }
+.acc-panel {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 12px 16px; background: #f8fafd;
+  color: var(--muted); font-size: 14px; line-height: 1.7;
+}
+/* ✅ Fix : si tu utilises hidden dans le HTML */
+.acc-panel[hidden] { display: none; }
+
+/* ── CHECKLIST ──────────────────────────────── */
+.progress {
+  display: inline-block; margin: 8px 0 12px;
+  padding: 6px 14px; border-radius: 999px;
+  background: var(--blue-light); border: 1px solid #b0c0d8;
+  font-size: 13px; font-weight: 600; color: var(--blue);
+}
+.checklist { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 6px; }
+.checklist li {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 10px 14px;
+  color: var(--text); font-size: 14px;
+  transition: border-color .15s, background .15s;
+}
+.checklist li:hover { border-color: #b0c0d8; background: #f8fafd; }
+.checklist input[type="checkbox"] {
+  appearance: none; -webkit-appearance: none;
+  width: 16px; height: 16px;
+  border: 2px solid var(--border); border-radius: 4px;
+  background: #fff; vertical-align: middle; margin-right: 10px;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  position: relative;
+}
+.checklist input[type="checkbox"]:checked { background: var(--blue); border-color: var(--blue); }
+.checklist input[type="checkbox"]:checked::after {
+  content: '✓'; position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-size: 11px; color: #fff;
+}
+/* ✅ Fix : focus visible sur checkbox custom */
+.checklist input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* ── FORMULAIRES ────────────────────────────── */
+.contact-form { margin-top: 18px; display: grid; gap: 14px; max-width: 500px; }
+.field label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: var(--text); }
+.field input, .field textarea {
+  width: 100%; padding: 10px 12px;
+  border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--white); color: var(--text);
+  font-family: 'Inter', sans-serif; font-size: 14px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.field input:focus, .field textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,58,107,0.1);
+  outline: none;
+}
+.field textarea { resize: vertical; min-height: 100px; }
+.error { color: var(--danger); font-size: 13px; margin: 4px 0 0; }
+.success {
+  color: #0d3e6e; font-size: 14px; font-weight: 500;
+  padding: 10px 14px; margin: 6px 0 0;
+  border: 1px solid #b0c0d8; border-radius: var(--radius);
+  background: var(--blue-light);
+}
+
+/* ── À PROPOS ───────────────────────────────── */
+.about-card {
+  margin-top: 12px; padding: 20px;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.about-card p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.about-card ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.about-card strong { color: var(--text); }
+
+/* ── FOOTER ─────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 24px; margin-top: 20px;
+  background: var(--white); text-align: center;
+}
+.footer-nav { display: flex; gap: 16px; justify-content: center; margin-bottom: 8px; flex-wrap: wrap; }
+.footer-nav a { color: var(--muted); font-size: 13px; }
+.footer-nav a:hover { color: var(--blue); text-decoration: underline; }
+.site-footer .muted { color: var(--muted); font-size: 12px; }
+
+/* ── IMAGES CAMPUS ──────────────────────────── */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.campus-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform .2s;
+}
+.campus-img:hover { transform: scale(1.02); }
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 860px) {
+  .cards { grid-template-columns: 1fr; }
+  .cyber-highlight { flex-direction: column; }
+  .burger { display: grid; place-items: center; }
+  .banner-right { display: none; }
+
+  .nav {
+    position: absolute; right: 16px; top: 62px;
+    display: none; flex-direction: column;
+    width: min(280px, calc(100vw - 32px));
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 6px;
+  }
+  .nav.is-open { display: flex; }
+  .nav-link { width: 100%; padding: 10px 14px; }
+
+  .site-header { padding: 10px 16px; }
+  .hero { padding: 20px 16px 12px; }
+  .hero-content { padding: 20px 18px; }
+  .section { padding: 18px 16px; }
+  .efrei-banner { padding: 0 16px; }
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formations • EFREI Paris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="efrei-banner">
+    <div class="banner-inner">
+      <div class="banner-left">
+        <div class="banner-logo">
+          <img src="media/media/logoefrei.png" alt="EFREI Paris" />
+        </div>
+        <div>
+          <p class="banner-school">École d'ingénieurs</p>
+          <h2 class="banner-name">EFREI Paris</h2>
+          <p class="banner-sub">Département Informatique — XTI205-CYB</p>
+        </div>
+      </div>
+      <div class="banner-right">
+        <span class="banner-tag">Informatique</span>
+        <span class="banner-tag gold">✦ XTI205-CYB</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <p class="brand-kicker">EFREI Paris</p>
+        <h1 class="brand-title">Cours et Formations</h1>
+      </div>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+    <nav class="nav" id="mainNav" aria-label="Navigation principale">
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link" href="formations.html" aria-current="page">Formations</a>
+      <a class="nav-link" href="equipe.html">Équipe</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2 class="page-title">Nos formations</h2>
+      <p class="muted">Des cursus adaptés aux besoins du marché du numérique.</p>
+      <div class="img-grid" style="margin-bottom: 20px;">
+        <img src="media/media/Amphithéâtre EFREI.png" alt="Amphithéâtre EFREI" class="campus-img" />
+        <img src="media/media/campus.png" alt="Campus EFREI" class="campus-img" />
+      </div>
+      <div class="table-wrap" role="region" aria-label="Tableau des formations" tabindex="0">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Formation</th>
+              <th>Niveau</th>
+              <th>Durée</th>
+              <th>Débouchés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> Cybersécurité (XTI205-CYB)</td>
+              <td>Bac+5</td>
+              <td>5 ans</td>
+              <td>RSSI, Pentester, SOC Analyst</td>
+            </tr>
+            <tr>
+              <td> Développement logiciel</td>
+              <td>Bac+5</td>
+              <td>5 ans</td>
+              <td>Développeur full-stack, Architecte</td>
+            </tr>
+            <tr>
+              <td> Réseaux & Infrastructures</td>
+              <td>Bac+5</td>
+              <td>5 ans</td>
+              <td>Admin réseau, Cloud Architect</td>
+            </tr>
+            <tr>
+              <td> Intelligence Artificielle</td>
+              <td>Bac+5</td>
+              <td>5 ans</td>
+              <td>Data Scientist, ML Engineer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="page-title">Questions fréquentes sur les formations</h3>
+      <p class="muted">Tout ce que vous devez savoir avant de postuler.</p>
+      <div class="accordion" data-accordion>
+        <button class="acc-btn" type="button">Quelles sont les conditions d'admission ?</button>
+        <div class="acc-panel">
+          <p>L'admission se fait sur dossier via Parcoursup pour les classes préparatoires intégrées, ou sur concours pour les admissions parallèles en 3e ou 4e année.</p>
+        </div>
+        <button class="acc-btn" type="button">Les formations sont-elles en alternance ?</button>
+        <div class="acc-panel">
+          <p>Oui, toutes nos formations de cycle ingénieur proposent une voie en alternance (apprentissage ou contrat de professionnalisation) à partir de la 3e année.</p>
+        </div>
+        <button class="acc-btn" type="button">Y a-t-il des cours en ligne ?</button>
+        <div class="acc-panel">
+          <p>L'EFREI dispose d'une plateforme e-learning complète. Certains cours sont disponibles en hybride (présentiel + distanciel) selon les spécialités.</p>
+        </div>
+        <button class="acc-btn" type="button">Quels sont les frais de scolarité ?</button>
+        <div class="acc-panel">
+          <p>Les frais varient selon le cursus et le mode de financement. Des bourses et des aides financières sont disponibles. Contactez le service administratif pour plus d'informations.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="contact.html#apropos">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="muted">© 2025–2026 • Projet XTI205-CYB • EFREI Paris — Département Informatique</p>
+  </footer>
+
+  <script src="js/js/main.js"></script>
+</body>
+</html>

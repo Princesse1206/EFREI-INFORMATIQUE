@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Département Informatique • EFREI Paris</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- TOP BANNER -->
+  <div class="efrei-banner">
+    <div class="container banner-inner">
+      <div class="banner-left">
+        <div class="banner-logo">
+          <img src="media/media/logoefrei.png" alt="EFREI Paris" />
+        </div>
+        <div>
+          <p class="banner-school">École d'ingénieurs</p>
+          <h2 class="banner-name">EFREI Paris</h2>
+          <p class="banner-sub">Département Informatique — XTI205-CYB</p>
+        </div>
+      </div>
+      <div class="banner-right">
+        <span class="banner-tag"> Informatique</span>
+        <span class="banner-tag gold"> XTI205-CYB</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <p class="brand-kicker">EFREI Paris</p>
+          <h1 class="brand-title">Département Informatique</h1>
+        </div>
+      </div>
+
+      <button class="burger" id="burgerBtn"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mainNav">☰</button>
+
+      <nav class="nav" id="mainNav">
+        <a class="nav-link" href="index.html" aria-current="page">Accueil</a>
+        <a class="nav-link" href="formations.html">Formations</a>
+        <a class="nav-link" href="admissions.html">Admissions</a>
+        <a class="nav-link" href="equipe.html">Équipe</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SECTION D’ACCUEIL -->
+    <section class="hero">
+      <div class="container hero-content">
+
+        <h2>
+          Bienvenue au Département
+          <span class="highlight">Informatique</span>
+          de l'EFREI 
+        </h2>
+
+        <p>
+          Formez-vous aux métiers du numérique :
+          cybersécurité, développement, réseaux et intelligence artificielle.
+          L’EFREI Paris vous prépare aux défis technologiques de demain.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="formations.html">Voir les formations</a>
+          
+        </div>
+
+        <div class="hero-badges">
+          <span class="badge"> Cybersécurité</span>
+          <span class="badge"> IA</span>
+          <span class="badge"> Réseaux</span>
+          <span class="badge"> Développement</span>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <span class="trust-num">94%</span>
+            <span class="trust-label">Insertion</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">500+</span>
+            <span class="trust-label">Partenaires</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CARROUSEL CAMPUS -->
+    <section class="section">
+      <div class="container">
+
+        <h3 class="page-title">Notre campus (carrousel)</h3>
+        <p class="muted">
+          EFREI Paris, Villejuif — un cadre moderne au service de l'excellence.
+        </p>
+
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+
+            <div class="slide">
+              <img src="media/media/campus2.png" alt="Campus EFREI Paris" />
+            </div>
+
+            <div class="slide">
+              <img src="media/media/etudiants.png" alt="Étudiants EFREI" />
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button id="prevSlide">‹</button>
+          <button id="nextSlide">›</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACTUALITÉS -->
+    <section class="section alt">
+      <div class="container">
+
+        <h3 class="page-title">Actualités & événements</h3>
+
+        <div class="cards">
+
+          <article class="card">
+            <h4> Journée Portes Ouvertes</h4>
+            <p>Rencontrez l’équipe et découvrez le campus.</p>
+            <a class="link" href="admissions.html">Infos →</a>
+          </article>
+
+          <article class="card">
+            <h4> Conférence Cybersécurité</h4>
+            <p>Découvrez les métiers et compétences clés.</p>
+            <a class="link" href="formations.html">Voir →</a>
+          </article>
+
+          <article class="card">
+            <h4> Atelier Web</h4>
+            <p>Initiation au développement web moderne.</p>
+            <a class="link" href="contact.html">S’inscrire →</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACCÈS RAPIDES -->
+    <section class="section">
+      <div class="container">
+
+        <h3 class="page-title">Accès rapides</h3>
+
+        <div class="cards">
+
+          <article class="card">
+            <h4> Formations</h4>
+            <p>Découvrez nos cursus et débouchés.</p>
+            <a class="link" href="formations.html">Voir →</a>
+          </article>
+
+          <article class="card">
+            <h4> Admissions</h4>
+            <p>Processus et modalités de candidature.</p>
+            <a class="link" href="admissions.html">Voir →</a>
+          </article>
+
+          <article class="card">
+            <h4> Contact</h4>
+            <p>Besoin d'informations ? Contactez-nous.</p>
+            <a class="link" href="contact.html">Voir →</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="index.html">Accueil</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="muted">
+        © 2025–2026 • Projet XTI205-CYB • EFREI Paris
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/js/main.js"></script>
+
+</body>
+</html>
